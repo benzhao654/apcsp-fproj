@@ -4,14 +4,19 @@
 #include <string.h>
 double func(double x, double* coeff, int degree);
 int main(int argc, char* argv[]) {
+    if ( argc < 3){
+      printf("Error! Please reenter\n");
+      return 0;
+    }
     int degree, i;
-    if(argc < )
     degree = argc - 1;
     double coeff[100];
     double xcord = atof(argv[degree]);
     for (i = 0; i < degree; i++)
     {
+        
         coeff[i] = atof(argv[i + 1]);
+        
     }
     printf("%f\n", func(xcord, coeff, degree));
 }
